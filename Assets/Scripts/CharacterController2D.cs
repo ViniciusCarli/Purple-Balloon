@@ -18,7 +18,7 @@ public class CharacterController2D : MonoBehaviour
 	public float fallMultiplier = 400;
 	public float lowJumpMultiplier = 200;
 
-	public int extraJump = 2;
+	public int extraJump = 1;
 
 	public int dashCount = 1;
 
@@ -43,7 +43,7 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 				m_Grounded = true;
 			if (m_Grounded){
-				extraJump = 2;
+				extraJump = 1;
 				dashCount = 1;
 			}
 
@@ -57,7 +57,7 @@ public class CharacterController2D : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other) {
     	if (other.tag == "deadzone")
     	{
-        	transform.position = new Vector3(-14.19f,0f,0f);
+        	transform.position = new Vector3(-0f,-0.506f,0f);
     	}
 	}
 
